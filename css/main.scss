@@ -91,6 +91,7 @@ header{
 		table{
 			border-collapse: collapse;
 			width: 100%;
+			margin: auto;
 
 			thead tr{
 				background: #F8F9FB;
@@ -100,24 +101,33 @@ header{
 					font-size: 18px;
 					color: #4D4949;
 					padding: 15px 0 12px 57px;
-					width: 25%;
+					width: 21,5%;
 					text-align: left;
+
+					&:last-child{
+						width: 14%;
+					}
 				}
 				border-bottom: 32px solid white;
 			}
 
-			tbody tr{
+			tbody > tr{
 				border-bottom: 1px solid #EFF0F5;
 				opacity: .6;
+				border-left: 6px solid #fff;
 
 				td{
 					padding: 15px 0 12px 57px;
-					width: 25%;
+					width: 21,5%;
 					text-align: left;
 					font-style: normal;
 					font-weight: bold;
 					font-size: 18px;
 					color: #686E6A;
+
+					&:last-child{
+						width: 14%;
+					}
 
 					.btns-req{
 						display: flex;
@@ -139,8 +149,8 @@ header{
 				&:hover{
 					background: #F8F9FB;
 					box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.05);
-					border-left: 6px solid #4C73FF;
-					border-bottom: 0;
+					border-left-color: #4C73FF;
+					border-bottom-color: #F8F9FB;
 					opacity: 1;
 				}
 			}
@@ -162,6 +172,14 @@ header{
 	justify-content: center;
 	border-fit: repeat;
 	align-items: center;
+	transition: 1s;
+	transform: translateY(-200%);
+
+
+	&.anime{
+		transform: translateY(0%);
+	}
+
 	& > .modal-body{
 		padding: 73px 140px ;
 		background: #FFFFFF;

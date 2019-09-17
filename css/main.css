@@ -98,7 +98,8 @@ header {
   padding: 62px 50px 58px; }
   #mainTable > .container > .row table {
     border-collapse: collapse;
-    width: 100%; }
+    width: 100%;
+    margin: auto; }
     #mainTable > .container > .row table thead tr {
       background: #F8F9FB;
       border-bottom: 32px solid white; }
@@ -108,20 +109,25 @@ header {
         font-size: 18px;
         color: #4D4949;
         padding: 15px 0 12px 57px;
-        width: 25%;
+        width: 21,5%;
         text-align: left; }
-    #mainTable > .container > .row table tbody tr {
+        #mainTable > .container > .row table thead tr th:last-child {
+          width: 14%; }
+    #mainTable > .container > .row table tbody > tr {
       border-bottom: 1px solid #EFF0F5;
-      opacity: .6; }
-      #mainTable > .container > .row table tbody tr td {
+      opacity: .6;
+      border-left: 6px solid #fff; }
+      #mainTable > .container > .row table tbody > tr td {
         padding: 15px 0 12px 57px;
-        width: 25%;
+        width: 21,5%;
         text-align: left;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         color: #686E6A; }
-        #mainTable > .container > .row table tbody tr td .btns-req {
+        #mainTable > .container > .row table tbody > tr td:last-child {
+          width: 14%; }
+        #mainTable > .container > .row table tbody > tr td .btns-req {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -135,17 +141,17 @@ header {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; }
-          #mainTable > .container > .row table tbody tr td .btns-req button {
+          #mainTable > .container > .row table tbody > tr td .btns-req button {
             background: transparent;
             cursor: pointer; }
-            #mainTable > .container > .row table tbody tr td .btns-req button:first-child {
+            #mainTable > .container > .row table tbody > tr td .btns-req button:first-child {
               margin-right: 27.32px; }
-      #mainTable > .container > .row table tbody tr.active, #mainTable > .container > .row table tbody tr:hover {
+      #mainTable > .container > .row table tbody > tr.active, #mainTable > .container > .row table tbody > tr:hover {
         background: #F8F9FB;
         -webkit-box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.05);
         box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.05);
-        border-left: 6px solid #4C73FF;
-        border-bottom: 0;
+        border-left-color: #4C73FF;
+        border-bottom-color: #F8F9FB;
         opacity: 1; }
 
 #modalPrint {
@@ -164,7 +170,17 @@ header {
   border-fit: repeat;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  transform: translateY(-200%); }
+  #modalPrint.anime {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%); }
   #modalPrint > .modal-body {
     padding: 73px 140px;
     background: #FFFFFF;
