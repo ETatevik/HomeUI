@@ -7,7 +7,57 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1 style="font-size: 45px">Yo!</h1>
+	
+
+	<article id="crEdPost">
+		<div class="container">
+			<h1>CREATE NEW RECORD:</h1>
+			<form action="success.html">
+				<div class="row">
+					<div class="col col-row inputs">
+						<label for="title">
+							Title:
+							<input type="text" id="title" placeholder="Name" >
+						</label>
+						<label for="iditi">
+							ID:
+							<input type="text" id="iditi" placeholder="134688791220">
+						</label>
+						<label for="langu">
+							Language:
+							<ul id="langu">
+								<li class="activeLang"><img src="img/lang/eng.svg" alt="">English <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+								<li><img src="img/lang/arm.svg" alt="">Armenian <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+								<li><img src="img/lang/ru.svg" alt="">Russian <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+							</ul>
+							<input type="hidden" id="lang">
+						</label>
+					</div>
+					<div class="col">
+						<label for="description">
+							Description:
+							<textarea name="" id="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+							</textarea>
+						</label>
+					</div>
+					<div class="col col-row filesFooter">
+						<label for="addMultiFile">
+							<span>Attach</span>
+							<input type="file" class="museumFileStyle" multiple id="addMultiFile">
+							<span class="addAudioImgNames">MuseumAudio.mp3 selected</span>
+						</label>
+						<div class="imgsForstyle">
+							<img src="img/addPost/pic.svg" alt="">
+							<img src="img/addPost/volum.svg" alt="">
+						</div>
+						<button type="submit" class="send"><img src="img/homeUI/plus.svg" alt=""> Add Record</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</article>
 
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/main.js"></script>
