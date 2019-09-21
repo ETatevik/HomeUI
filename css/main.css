@@ -296,7 +296,7 @@ header {
             font-style: normal;
             font-weight: bold;
             font-size: 18px;
-            color: #BFBFBF;
+            color: #BFBFBF !important;
             margin-left: 25px;
             width: 70%; }
             #crEdPost > .container form > .row > .col.inputs label > input:focus::-webkit-input-placeholder {
@@ -322,13 +322,15 @@ header {
             flex-direction: column;
             margin-left: 23px; }
             #crEdPost > .container form > .row > .col.inputs label ul#langu > li {
-              font-style: normal;
-              font-weight: bold;
-              font-size: 18px;
-              color: #BFBFBF;
               padding: 10px 0;
               cursor: pointer;
               display: none; }
+              #crEdPost > .container form > .row > .col.inputs label ul#langu > li > span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: #BFBFBF;
+                margin-right: 5px; }
               #crEdPost > .container form > .row > .col.inputs label ul#langu > li > img:first-child {
                 width: 26px;
                 height: 13px;
@@ -351,7 +353,7 @@ header {
                 display: block; }
                 #crEdPost > .container form > .row > .col.inputs label ul#langu > li.activeLang > .arBtn {
                   visibility: visible; }
-              #crEdPost > .container form > .row > .col.inputs label ul#langu > li:hover {
+              #crEdPost > .container form > .row > .col.inputs label ul#langu > li:hover > span {
                 color: #a6a6a6; }
       #crEdPost > .container form > .row > .col > label[for="description"] {
         font-style: normal;

@@ -12,31 +12,31 @@
 	<article id="crEdPost">
 		<div class="container">
 			<h1>CREATE NEW RECORD:</h1>
-			<form action="success.html">
+			<form action="success.html" name="posts">
 				<div class="row">
 					<div class="col col-row inputs">
 						<label for="title">
 							Title:
-							<input type="text" id="title" placeholder="Name" >
+							<input required type="text" id="title" placeholder="Name" name="title" minlength="5" >
 						</label>
 						<label for="iditi">
 							ID:
-							<input type="text" id="iditi" placeholder="134688791220">
+							<input required type="text" id="iditi" placeholder="134688791220" name="id">
 						</label>
 						<label for="langu">
 							Language:
 							<ul id="langu">
-								<li class="activeLang"><img src="img/lang/eng.svg" alt="">English <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
-								<li><img src="img/lang/arm.svg" alt="">Armenian <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
-								<li><img src="img/lang/ru.svg" alt="">Russian <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+								<li class="activeLang"><img src="img/lang/eng.svg" alt=""><span>English</span> <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+								<li><img src="img/lang/arm.svg" alt=""><span>Armenian</span> <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
+								<li><img src="img/lang/ru.svg" alt=""><span>Russian</span> <img class="arBtn" src="img/addPost/arrow-bottom.svg" alt=""></li>
 							</ul>
-							<input type="hidden" id="lang">
+							<input required  type="hidden" id="lang" name="lang">
 						</label>
 					</div>
 					<div class="col">
 						<label for="description">
 							Description:
-							<textarea name="" id="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+							<textarea name="description" id="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
 
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
 							</textarea>
@@ -45,9 +45,11 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 					<div class="col col-row filesFooter">
 						<label for="addMultiFile">
 							<span>Attach</span>
-							<input type="file" class="museumFileStyle" multiple id="addMultiFile">
-							<span class="addAudioImgNames">MuseumAudio.mp3 selected</span>
+							<input  required type="file" class="museumFileStyle" multiple id="addMultiFile" accept="image/jpg, image/png, audio/mp3">
+							<span class="addAudioImgNames">You can select 1 image and 1 audio</span>
 						</label>
+						<input type="file" name="image" style="display: none;">
+						<input type="file" name="audio" style="display: none;">
 						<div class="imgsForstyle">
 							<img src="img/addPost/pic.svg" alt="">
 							<img src="img/addPost/volum.svg" alt="">

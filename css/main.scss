@@ -283,7 +283,7 @@ header{
 							font-style: normal;
 							font-weight: bold;
 							font-size: 18px;
-							color: #BFBFBF;
+							color: #BFBFBF !important;
 							margin-left: 25px;
 							width: 70%;
 							&:focus::placeholder{
@@ -305,14 +305,16 @@ header{
 							margin-left: 23px;
 
 							& > li{
-								font-style: normal;
-								font-weight: bold;
-								font-size: 18px;
-								color: #BFBFBF;
 								padding: 10px 0;
 								cursor: pointer;
 								display: none;
-
+								& > span{
+									font-style: normal;
+									font-weight: bold;
+									font-size: 18px;
+									color: #BFBFBF;
+									margin-right: 5px;
+								}
 								& > img:first-child{
 									width: 26px;
 									height: 13px;
@@ -338,7 +340,7 @@ header{
 									}
 								}
 
-								&:hover{
+								&:hover > span{
 									color: darken( #BFBFBF, 10%);
 								}
 							}
