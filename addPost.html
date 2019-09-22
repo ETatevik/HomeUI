@@ -12,7 +12,7 @@
 	<article id="crEdPost">
 		<div class="container">
 			<h1>CREATE NEW RECORD:</h1>
-			<form action="success.html" name="posts">
+			<form action="success.html" name="postsMU">
 				<div class="row">
 					<div class="col col-row inputs">
 						<label for="title">
@@ -43,13 +43,13 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 						</label>
 					</div>
 					<div class="col col-row filesFooter">
-						<label for="addMultiFile">
+						<label class="addMultiFile">
 							<span>Attach</span>
-							<input  required type="file" class="museumFileStyle" multiple id="addMultiFile" accept="image/jpg, image/png, audio/mp3">
+							<input required type="file" name="image"  class="active"  accept="image/jpeg, image/jpg, image/png">
+							<input required type="file" name="audio"  accept="audio/mp3, audio/mpeg3" disabled>
 							<span class="addAudioImgNames">You can select 1 image and 1 audio</span>
 						</label>
-						<input type="file" name="image" style="display: none;">
-						<input type="file" name="audio" style="display: none;">
+						
 						<div class="imgsForstyle">
 							<img src="img/addPost/pic.svg" alt="">
 							<img src="img/addPost/volum.svg" alt="">

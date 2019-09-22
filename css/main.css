@@ -296,9 +296,17 @@ header {
             font-style: normal;
             font-weight: bold;
             font-size: 18px;
-            color: #BFBFBF !important;
+            color: #4D4949;
             margin-left: 25px;
             width: 70%; }
+            #crEdPost > .container form > .row > .col.inputs label > input::-webkit-input-placeholder {
+              color: #BFBFBF !important; }
+            #crEdPost > .container form > .row > .col.inputs label > input:-ms-input-placeholder {
+              color: #BFBFBF !important; }
+            #crEdPost > .container form > .row > .col.inputs label > input::-ms-input-placeholder {
+              color: #BFBFBF !important; }
+            #crEdPost > .container form > .row > .col.inputs label > input::placeholder {
+              color: #BFBFBF !important; }
             #crEdPost > .container form > .row > .col.inputs label > input:focus::-webkit-input-placeholder {
               color: transparent; }
             #crEdPost > .container form > .row > .col.inputs label > input:focus:-ms-input-placeholder {
@@ -387,7 +395,7 @@ header {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; }
-        #crEdPost > .container form > .row > .col.filesFooter > label[for="addMultiFile"] {
+        #crEdPost > .container form > .row > .col.filesFooter > label.addMultiFile {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -402,8 +410,11 @@ header {
           align-items: center;
           width: 65%;
           padding-right: 15px;
-          margin-right: 28px; }
-          #crEdPost > .container form > .row > .col.filesFooter > label[for="addMultiFile"] span {
+          margin-right: 28px;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer; }
+          #crEdPost > .container form > .row > .col.filesFooter > label.addMultiFile span {
             background: #58CF6B;
             border-radius: 58px;
             width: 180px;
@@ -413,7 +424,7 @@ header {
             color: #FFFFFF;
             padding: 14px 64px;
             margin-right: 15px; }
-          #crEdPost > .container form > .row > .col.filesFooter > label[for="addMultiFile"] span.addAudioImgNames {
+          #crEdPost > .container form > .row > .col.filesFooter > label.addMultiFile span.addAudioImgNames {
             background: transparent;
             font-style: normal;
             font-weight: normal;
@@ -424,8 +435,15 @@ header {
             width: 100%;
             display: block;
             text-align: center; }
-          #crEdPost > .container form > .row > .col.filesFooter > label[for="addMultiFile"] input {
-            display: none; }
+          #crEdPost > .container form > .row > .col.filesFooter > label.addMultiFile input {
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            height: 100%;
+            z-index: 5; }
+            #crEdPost > .container form > .row > .col.filesFooter > label.addMultiFile input.active {
+              z-index: 10;
+              cursor: pointer; }
         #crEdPost > .container form > .row > .col.filesFooter > .imgsForstyle img {
           width: 35px; }
           #crEdPost > .container form > .row > .col.filesFooter > .imgsForstyle img:first-child {
@@ -454,6 +472,8 @@ header {
           #crEdPost > .container form > .row > .col.filesFooter > .send > img {
             width: 19px;
             margin-right: 11.93px; }
+          #crEdPost > .container form > .row > .col.filesFooter > .send:hover {
+            background: #194bff; }
 
 #successBody {
   min-height: 100vh;
@@ -514,3 +534,114 @@ header {
       text-align: center; }
       #successBody > .container > .row > a:hover {
         background: #194bff; }
+
+#login > .container > .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 75px auto 180px; }
+  #login > .container > .row > img {
+    max-width: 269px; }
+  #login > .container > .row > form {
+    max-width: 414px;
+    width: 100%;
+    margin: 123px auto; }
+    #login > .container > .row > form .col {
+      width: 100%;
+      margin-bottom: 67px; }
+      #login > .container > .row > form .col > label {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 11px 0;
+        border-bottom: 2px solid #CFCFCF; }
+        #login > .container > .row > form .col > label img {
+          max-width: 27px;
+          opacity: .25; }
+        #login > .container > .row > form .col > label > input {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          color: #3E3D3D;
+          margin-left: 13px;
+          width: 90%;
+          height: 100%; }
+          #login > .container > .row > form .col > label > input[type="password"] {
+            margin-left: 18.12px; }
+          #login > .container > .row > form .col > label > input::-webkit-input-placeholder {
+            color: #BFBFBF; }
+          #login > .container > .row > form .col > label > input:-ms-input-placeholder {
+            color: #BFBFBF; }
+          #login > .container > .row > form .col > label > input::-ms-input-placeholder {
+            color: #BFBFBF; }
+          #login > .container > .row > form .col > label > input::placeholder {
+            color: #BFBFBF; }
+          #login > .container > .row > form .col > label > input:focus::-webkit-input-placeholder {
+            color: transparent; }
+          #login > .container > .row > form .col > label > input:focus:-ms-input-placeholder {
+            color: transparent; }
+          #login > .container > .row > form .col > label > input:focus::-ms-input-placeholder {
+            color: transparent; }
+          #login > .container > .row > form .col > label > input:focus::placeholder {
+            color: transparent; }
+        #login > .container > .row > form .col > label:hover, #login > .container > .row > form .col > label.active {
+          border-bottom-color: #4C73FF; }
+          #login > .container > .row > form .col > label:hover > img, #login > .container > .row > form .col > label.active > img {
+            opacity: 1; }
+    #login > .container > .row > form > button[type="submit"] {
+      background: #4C73FF;
+      -webkit-box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.25);
+      box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.25);
+      border-radius: 58px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #FFFFFF;
+      padding: 12.5px 57px;
+      margin: auto;
+      display: block;
+      cursor: pointer; }
+      #login > .container > .row > form > button[type="submit"]:hover {
+        background: #194bff; }
+
+#login > .container > .footer > .col {
+  text-align: center; }
+  #login > .container > .footer > .col > a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #C7C7C7; }
+    #login > .container > .footer > .col > a:hover {
+      color: #878787; }
+  #login > .container > .footer > .col > p {
+    margin-top: 7px;
+    margin-bottom: 46px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #3E3D3D; }
+    #login > .container > .footer > .col > p > a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #4C73FF; }
+      #login > .container > .footer > .col > p > a:hover {
+        text-decoration: underline;
+        color: #0037ff; }
