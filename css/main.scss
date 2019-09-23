@@ -576,9 +576,9 @@ header{
 						}
 						&:hover,
 						&.active{
-							border-bottom-color: #4C73FF;
+							border-bottom-color: #4C73FF !important;
 							&>img{
-								opacity: 1;
+								opacity: 1 !important;
 							}
 						}
 					}

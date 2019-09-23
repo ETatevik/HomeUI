@@ -602,9 +602,9 @@ header {
           #login > .container > .row > form .col > label > input:focus::placeholder {
             color: transparent; }
         #login > .container > .row > form .col > label:hover, #login > .container > .row > form .col > label.active {
-          border-bottom-color: #4C73FF; }
+          border-bottom-color: #4C73FF !important; }
           #login > .container > .row > form .col > label:hover > img, #login > .container > .row > form .col > label.active > img {
-            opacity: 1; }
+            opacity: 1 !important; }
     #login > .container > .row > form > button[type="submit"] {
       background: #4C73FF;
       -webkit-box-shadow: 0px 4px 4px rgba(76, 115, 255, 0.25);

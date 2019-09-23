@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
 
                     reader.onload = function(readerEvt) {
                         var binaryString = readerEvt.target.result;
-                        console.log(btoa(binaryString));
+                        console.log(btoa(binaryString));//make base64 text file any file
                     };
 
                     reader.readAsBinaryString(file);
@@ -98,8 +98,11 @@ jQuery(document).ready(function($) {
 
             $(".addMultiFile > input[type='file']").on("change", function(event) {
                 
-                if ($(this).prop('files')[0].size / 1048576 > 5){
-                    alert('Maximum file size 5 MB');
+                if ($(this).prop('files')[0].size / 1048576 > 5 && $(this).attr('name') == 'image'){
+                    alert('Maximum image size 5 MB');
+                    $(this).val('');
+                }else if($(this).prop('files')[0].size / 1048576 > 100 && $(this).attr('name') == 'audio'){
+                    alert('Maximum audio size 100 MB');
                     $(this).val('');
                 }else{
                     $(this).attr('disabled', 'true');
@@ -116,7 +119,7 @@ jQuery(document).ready(function($) {
                             locText = locText.join('');
                             locText += '  &  ' + $(this).prop('files')[0].name;
                         }
-                        handleFileSelect(event);
+                        handleFileSelect(event);//make base64 text file image file,but not give that in server only console log
                     }else{
                         if(!/  &  /.test(locText)){
                             locText +=  '  &  ' + $(this).prop('files')[0].name;
@@ -126,7 +129,7 @@ jQuery(document).ready(function($) {
                             locText = locText.join('');
                             locText += '  &  ' + $(this).prop('files')[0].name;
                         }
-                        handleFileSelect(event);
+                        handleFileSelect(event);//make base64 text file audio file,but not give that in server only console log
 
                     }
 
@@ -145,25 +148,26 @@ jQuery(document).ready(function($) {
 
     // login (admin) html script // index html
     {
-        $('#login .col > label').on({
-            click: function(event) {
+        $('#login .col > label > input').on({
+            focus: function(event) {
                 event.preventDefault();
-                $(this).toggleClass('active');
-                $('#login .col > label').not(this).removeClass('active');
+                $(this).parent('label').addClass('active');
+                $('#login .col > label > input').not(this).parent('label').removeClass('active');
             },
             blur: function(event){
                 event.preventDefault();
-                $(this).removeClass('active');
-                if($(this).children('input').val() != ""){
-                    $(this).css('borderBottomColor', '#4C73FF');
-                    $(this).children('img').css('opacity', '1');
-                }else{
-                    $(this).css('borderBottomColor', '#CFCFCF');
-                    $(this).children('img').css('opacity', '.25');
+                $(this).parent('label').removeClass('active');
+            },
+            change: function(event){
+                event.preventDefault();
+                $(this).parent('label').css('borderBottomColor', '#4C73FF');
+                $(this).prev('img').css('opacity', '1');
+                if(!$(this).val()){                    
+                    $(this).parent('label').removeAttr('style');
+                    $(this).prev('img').removeAttr('style');
                 }
             }
-
-    });
+        });
     }
 
 });
